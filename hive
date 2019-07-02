@@ -1,0 +1,14 @@
+apache hive
+downloads
+release hive
+hive 1.2.2
+go to instance -->wget link
+tar -xvzf ap{tab}
+
+rm ap{tab}
+mv apache.hive.bin /hive
+open .bashrc file
+  HIVE_HOME=/home/ec2-user/hive
+  PATH=     :$HIVE_HOME/bin:$PATH
+  
+ source .bashrc
