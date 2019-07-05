@@ -1,0 +1,79 @@
+elastic beanstalk
+
+select beanstalk fron compute of services
+->get started
+->complete the steps
+->now check the url
+->change and deploy
+->upload zip file of your web page and name its version
+->wait for process
+->again click on url: success
+
+->we can also go for previous versions for further checking
+
+
+
+----------------------------------
+HDFS + SPARK
+
+data storage --namenode  ---data node ==spark worker
+processing -- spark master
+
+yarn 10 times faster
+RAM --internal memory process
+
+-----------------------
+spark --create RDD -(Resilient Distributed Dataset)
+
+ADD(slow)  --> RAM(faster) --> LPU(fastest)44
+
+
+
+
+--------spark in jupyter-----------
+
+!sudo pip3 install findspark
+import findspark
+findspark.init('/home/ec2-user/saprk24')
+import pyspark
+dir(pyspark)
+!sudo pip3 install requests
+import requests
+from pyspark import SparkContext
+sc=SparkContext()  #calling sparkconetxt function
+data=["hello","this","is","pyspark"]
+frdd=sc.textFile('/home/ec2-user/a.txt')
+type(frdd)
+frdd.first()
+frdd.collect()
+frdd.take(3)
+frdd.count()
+
+#convert list or tuple data into rdd
+newrdd=sc.parallelize(data)
+
+newrdd.first()
+newrdd.collect()
+newrdd.take(3)
+newrdd.count()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/
+
+
+
+
